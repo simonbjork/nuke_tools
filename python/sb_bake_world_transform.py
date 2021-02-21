@@ -483,5 +483,5 @@ class BakeWorldTransformPanel(nukescripts.PythonPanel):
 		)
 
 def show_gui():
-	p = BakeWorldPositionPanel()
+	p = BakeWorldTransformPanel()
 	p.show()
