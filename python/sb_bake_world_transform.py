@@ -15,14 +15,14 @@
 		- Add script to the Nuke plugin path.
 		- Add (something like) the following to your menu.py
 
-		import sb_bake_world_position
+		import sb_bake_world_transform
 		sb_tools = nuke.toolbar("Nodes").addMenu("sb tools", icon = "sb_tools.png" )
 
 		# Non gui example.
-		sb_tools.addCommand("sb BakeWorldPosition", 'sb_bake_world_position.bake_world_position()', '')
+		sb_tools.addCommand("sb BakeWorldPosition", 'sb_bake_world_transform.bake_world_transform()', '')
 
 		# GUI example.
-		sb_tools.addCommand("sb BakeWorldPosition (GUI)", 'sb_bake_world_position.show_gui()', '')
+		sb_tools.addCommand("sb BakeWorldPosition (GUI)", 'sb_bake_world_transform.show_gui()', '')
 
 '''
 ##################################################
