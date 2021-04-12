@@ -223,7 +223,7 @@ def set_knob(knob, values, frames, cleanup=False):
 		return
 
 	if not len(values) == len(frames):
-		print "Values and frames are not the same length"
+		print("Values and frames are not the same length")
 		return
 
 	anim_lists = {}
@@ -242,20 +242,20 @@ def set_knob(knob, values, frames, cleanup=False):
 		# Generate a list with frame numbers and AnimationKey pairs.
 		for num2, single in enumerate(value):
 
-			if not num2 in anim_lists.keys():
+			if not num2 in list(anim_lists.keys()):
 				anim_lists[num2] = []
 			
 			anim_key = nuke.AnimationKey(frames[num1], single)
 			anim_lists[num2].append(anim_key)
 
 	# Set each value as animated.
-	for i in anim_lists.keys():
+	for i in list(anim_lists.keys()):
 		knob.setAnimated(i, True)
 
 	anim_curves = knob.animations()
 
 	# Set values.
-	for i in anim_lists.keys():
+	for i in list(anim_lists.keys()):
 		anim_curves[i].addKey(anim_lists[i])
 
 	if cleanup:
