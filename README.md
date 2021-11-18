@@ -1,7 +1,5 @@
 # Nuke tools
 
-All tools are released under the MIT licence.
-
 The MIT License (MIT)
 
 Copyright (c) 2021 Simon Bjork
